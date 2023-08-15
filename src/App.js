@@ -16,7 +16,7 @@ export default function App() {
           >
             open-sourced on GitHub
           </a>{" "}
-          and{" "}
+          and <br />
           <a
             href="https://preeminent-madeleine-5df1ec.netlify.app/"
             target="_blank"
