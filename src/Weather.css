@@ -20,16 +20,17 @@
   margin: 0;
   padding: 0;
 }
+
 .Weather li {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 100;
-  line-height: 24px;
+  line-height: 28px;
   list-style: none;
 }
 
 .Weather img {
-  height: 64px;
-  width: 64px;
+  height: 84px;
+  width: 84px;
   margin-right: 10px;
   /* display: inline-block; */
 }
@@ -37,7 +38,7 @@
 .Weather .temperature {
   font-size: 60px;
   font-weight: 400;
-  line-height: 64px;
+  line-height: 84px;
 }
 
 .Weather .unit {
