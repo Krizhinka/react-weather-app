@@ -7,6 +7,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
+  // 🔼
   // const [city, setCity] = useState(null);
   // const [date, setDate] = useState(null);
   // const [icon, setIcon] = useState(null);
@@ -23,8 +24,6 @@ export default function Weather(props) {
       city: response.data.city,
       date: new Date(response.data.time * 1000),
       icon: response.data.condition.icon,
-      // https://www.jsdelivr.com/package/npm/react-animated-weather
-      // <WeatherIcon code={props.data.icon} />
 
       temperature: response.data.temperature.current,
       condition: response.data.condition.description,
@@ -32,6 +31,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
     });
 
+    //  🔼
     // setCity(response.data.city);
     // setDate(response.data.time * 1000);
     // setIcon(response.data.condition.icon_url);

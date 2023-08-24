@@ -29,10 +29,10 @@
 }
 
 .Weather canvas {
+  margin-right: 10px;
+  margin-top: 15px;
   /* height: 84px; */
   /* width: 84px; */
-  margin-right: 10px;
-  margin-top: 20px;
   /* display: inline-block; */
 }
 

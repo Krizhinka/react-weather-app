@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -15,18 +16,15 @@ export default function WeatherInfo(props) {
           <div className="d-flex">
             <div>
               <WeatherIcon code={props.data.icon} />
-              {/* alt={props.data.condition
-                  .split(" ")
-                  .map((w) => w[0].toUpperCase() + w.substr(1).toLowerCase())
-                  .join(" ")}*/}
+            </div>
 
-              {/* <img 
+            {/* 🔼
+               <img 
                 src={props.data.icon.replace("http:", "https:")} 
                  alt=
               {/* {props.data.condition
               .split(" ") .map((w) => w[0].toUpperCase() +
               w.substr(1).toLowerCase()) .join(" ")} /> */}
-            </div>
 
             {/* src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" 
             `${response.data.condition.icon_url.replace("http:", "https:")}`
@@ -34,10 +32,7 @@ export default function WeatherInfo(props) {
                 condition.slice(1)}  */}
 
             <div className="temp-indicator">
-              <span className="temperature">
-                {Math.round(props.data.temperature)}
-              </span>
-              <span className="unit">°C</span>
+              <WeatherTemperature celsius={props.data.temperature} />
             </div>
           </div>
         </div>
