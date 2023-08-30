@@ -8,7 +8,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
-  // 🔼
+  // 🔼 (Not elegant approach of useState 🔽)
   // const [city, setCity] = useState(null);
   // const [date, setDate] = useState(null);
   // const [icon, setIcon] = useState(null);
@@ -26,14 +26,13 @@ export default function Weather(props) {
       city: response.data.city,
       date: new Date(response.data.time * 1000),
       icon: response.data.condition.icon,
-
       temperature: response.data.temperature.current,
       condition: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
     });
 
-    //  🔼
+    //  🔼 (Not elegant approach of useState 🔽)
     // setCity(response.data.city);
     // setDate(response.data.time * 1000);
     // setIcon(response.data.condition.icon_url);
@@ -52,7 +51,7 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
-    // alert(city);
+    //  alert(city);
   }
 
   function handleCityChange(event) {
@@ -80,14 +79,6 @@ export default function Weather(props) {
                 className="btn btn-primary w-100"
               />
             </div>
-
-            {/* <div className="col-3"> 
-              <input
-                type="submit"
-                value="Current"
-                className="btn btn-warning w-100"
-              />
-            </div>*/}
           </div>
         </form>
 

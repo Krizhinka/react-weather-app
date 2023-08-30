@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
       </h3>
 
       <div className="row">
-        <div className="col-7  mt-3">
+        <div className="col-7  mt-3 mb-5">
           <div className="d-flex">
             <div>
               <WeatherIcon code={props.data.icon} size={60} />
