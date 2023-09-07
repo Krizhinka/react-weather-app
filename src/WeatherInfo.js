@@ -17,20 +17,6 @@ export default function WeatherInfo(props) {
             <div>
               <WeatherIcon code={props.data.icon} size={60} />
             </div>
-
-            {/* 🔼
-               <img 
-                src={props.data.icon.replace("http:", "https:")} 
-                 alt=
-              {/* {props.data.condition
-              .split(" ") .map((w) => w[0].toUpperCase() +
-              w.substr(1).toLowerCase()) .join(" ")} /> */}
-
-            {/* src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" 
-            `${response.data.condition.icon_url.replace("http:", "https:")}`
-            alt={weatherData.condition.charAt(0).toUpperCase() +
-                condition.slice(1)}  */}
-
             <div className="temp-indicator">
               <WeatherTemperature celsius={props.data.temperature} />
             </div>
